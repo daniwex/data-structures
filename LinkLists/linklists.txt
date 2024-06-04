@@ -1,0 +1,9 @@
+Advantages
+1. Fast insertion
+2. Fast Deletion
+3. Ordered
+Flexible size
+
+Disadvantages 
+1. Slow Lookup 
+More memory 

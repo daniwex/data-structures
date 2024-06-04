@@ -1,0 +1,13 @@
+Stacks implements LIFO (Last In First Out)
+
+Has three methods:
+1. pop() - removes the last item
+2. push() -  adds an item to the end of the item list
+3. peak() - view the topmost item
+
+Queues use FIFO (First In, First Out)
+
+has three methods
+1. enqueue() - similar to above
+2. dequeue() - similar to above
+3. peek() - similar to stack
