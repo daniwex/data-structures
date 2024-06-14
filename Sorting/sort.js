@@ -10,6 +10,21 @@ const bubble = function (arr) {
   }
   return arr;
 };
+const bubble2 = function (arr) {
+  let swapped = false;
+  while(!swapped){
+    swapped = true;
+    for(let i=0;i<arr.length;i++){
+      if(arr[i] > arr[i+1]){
+        let temp = arr[i];
+        arr[i] = arr[i+1];
+        arr[i+1] = temp;
+        swapped = false
+      }
+    }
+  }
+  return arr;
+};
 
 const selection = function (arr) {
   for (let i = 0; i < arr.length; i++) {
@@ -26,7 +41,18 @@ const selection = function (arr) {
   return arr;
 };
 
-const Insertion = function (arr) {};
+const Insertion = function (arr) {
+  for(let i=1;i<arr.length;i++){
+    let current = arr[i];
+    let j = i - 1;
+    while(j >= 0 && arr[j] > current){
+      arr[j + 1] = arr[j]
+      j--
+    }
+    arr[j + 1] = current
+  }
+  return arr
+};
 
 function merge(left, right) {
   let sortedArr = []; // the sorted items will go here
@@ -95,4 +121,4 @@ let sortString = (str) => {
   }, '');
 }
 
-module.exports = { bubble, selection, selectionStr, Insertion, mergeSort, quickSort, sortString };
+module.exports = { bubble, selection, selectionStr, Insertion, mergeSort, quickSort, sortString, bubble2 };

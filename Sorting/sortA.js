@@ -7,4 +7,5 @@ let str = 'ayhbnjkpo'
 // m = str.slice(1)
 // console.log(m)
 console.log(sorting.selectionStr(str))
+console.log(sorting.Insertion(arr))
 // console.log(sorting.quickSort(arr, 0, arr.length - 1))
