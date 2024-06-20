@@ -89,6 +89,24 @@ const quickSort = (arr) => {
   return [...quickSort(leftArr), pivot, ...quickSort(rightArr)];
 };
 
+function shellSort(arr) {
+  let n = arr.length;
+  for (let gap = Math.floor(n/2); gap > 0; gap = Math.floor(gap/2)) {
+    console.log(gap)
+      for (let i = gap; i < n; i += 1)  {
+          let temp = arr[i];
+
+          let j;
+          for (j = i; j >= gap && arr[j-gap] > temp; j-=gap)  {
+              arr[j] = arr[j-gap];
+          }
+          arr[j] = temp;
+      }
+  }
+  return arr;
+}
+
+
 const mergeSort = function (arr) {
   if (arr.length <= 1) return arr;
   let mid = Math.floor(arr.length / 2);
@@ -121,4 +139,4 @@ let sortString = (str) => {
   }, '');
 }
 
-module.exports = { bubble, selection, selectionStr, Insertion, mergeSort, quickSort, sortString, bubble2 };
+module.exports = { bubble, selection, selectionStr, Insertion, mergeSort, quickSort, sortString, bubble2, shellSort };
